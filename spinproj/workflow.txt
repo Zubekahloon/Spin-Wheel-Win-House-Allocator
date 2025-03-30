@@ -1,0 +1,55 @@
+Project File Structure:
+
+   
+env/                  # Virtual Environment (Don't put project files here)
+spinproj/
+│-- media/            # For media files (images, CSV files, etc.)
+│-- static/           # For static files (CSS, JS, etc.)
+│-- templates/        # For HTML templates
+│-- spinproj/         # Main project folder (Contains settings, wsgi, asgi, etc.)
+│-- spinapp/          # Django app folder
+│   ├── management/
+│   │   ├── commands/ # Custom management commands (like load CSV data)
+│   ├── models.py     # Database models
+│   ├── views.py      # Views (logic)
+│   ├── urls.py       # URLs
+│-- db.sqlite3        # Database file
+│-- manage.py         # Django manage script
+
+
+if you want to run the project:
+step 1: 
+Open media folder then open (house_user_list.csv) file then add house-no and user email,
+es file ka matlab ha k hum phely sy he bata dy ga k es user ko kon sa house no alloat ho ga, 
+just like (ali@gamil.com, houseno 25)
+
+Step 2:
+File ma data add krny ky bd, app 1st spinproj waly folder ma ajay, jis ma manage.py file exixt kr ri ha
+ya terminal open kry aur ya command run kr ky apni es file ko database pr load/save karwa ly
+
+python manage.py load_users
+
+load_users ek file ka name hy jis ma hum ny csv file ko kasy database ma upload krna hy us ka function 
+bana howa hy.
+jo es folder ma hy: folder (spinapp/management/commands/)
+
+step 3:
+Ager app ny file ni banani hy tu app simple khud bi form ky through houses user ko assign kr sakty, jo 
+us form sy database ma save ho jay ga simple
+
+Step 4:
+open media folder us ma ek file ha (house_no.csv) es file ma app ny total house no add krny hy taka ya 
+sary house no spinner ma add ho sakhy
+
+step 5:
+Ya sab krny ky bd app ny terminal open krna hy aur ya command run karo, yad ra commandrun krty time app 
+ko usi folder ma hona hy
+jis folder ma (manage.py) name ki file ho
+
+command = (python manage.py runserver)
+
+step 6:
+project start ho gia, terminal ma ek url ay ga usy copy kr ki kisi bi browser ma paste kr do.
+
+step 7.
+spin pr click karo aur wait kary.......

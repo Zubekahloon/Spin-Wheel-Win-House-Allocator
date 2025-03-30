@@ -1,0 +1,73 @@
+Project Title: House Number Assignment System (Spin Wheel Lottery)
+
+1️⃣ Purpose:
+This project is designed to assign house numbers to users fairly using a Spin Wheel System. The system ensures:
+✅ A single user can have multiple houses.
+❌ A single house cannot be assigned to multiple users.
+✅ The assignment is stored in a database and can be retrieved later.
+
+
+2️⃣ Project Requirements:
+
+Technologies Used:
+*Backend: Django (Python)
+
+*Frontend: HTML, CSS, JavaScript (Canvas for the Spin Wheel)
+
+*Database: SQLite /
+
+*CSV File Handling: Used to load house-user data
+
+
+3️⃣ Prerequisites:
+1. Install Python & Django
+2. Install necessary dependencies using:
+   i. pip install django
+
+3. Create a Django project & app
+4. Set up models and migrate database
+
+4️⃣ How It Works?
+
+Step 1: Load Users & House Numbers (CSV File)
+
+Open prject folder in which manage.py file exit. Then Go to Terminal and run the Comaand (python manage.py load_users)
+
+A CSV file (house_user_list.csv) contains predefined users and their assigned house numbers.
+
+This file is loaded into the database using a Django management command.
+
+A house number is assigned to only one user, but a user can have multiple houses.
+ Then Run this command in terminal ( py manage.py runserver) for run the project in django
+
+
+Step 2: Spin the Wheel
+The Spin Wheel UI randomly picks a house number.
+
+It checks the database to verify house availability.
+
+If the house is already assigned, it skips that house and picks another.
+
+If the house is available, it assigns the house to a user.
+
+And remove the house no in the spin wheel and csv file
+
+
+Step 3: Store & Display Results
+The assigned house number and user details are stored in the database.
+
+The result is displayed on the screen with a popup box.
+
+The updated list of available houses is maintained to avoid duplicate assignments.
+
+
+5️⃣Workflow (Step by Step)
+  1. Upload CSV File - email, house_number is loaded into the system.
+  2. House Validation  Checks if the house is already assigned.
+  3. Spin the Wheel - Randomly selects a house number.
+  4. Check Availability -
+ ✅ If available, assign it to the user.
+ ❌ If not, choose another house.
+  5. Save Assignment - Store user-house mapping in the database.
+  6. Show Result - Display winner details in the popup.
+  7. Update Available Houses - Remove assigned house from the pool.
